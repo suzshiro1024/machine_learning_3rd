@@ -29,7 +29,7 @@ if __name__ == "__main__":
     plt.legend(loc="upper left")
     plt.tight_layout()
 
-    plt.savefig("../../figure/Adaline_SGD_region.png")
+    plt.savefig("../../figure/test_Adaline_SGD_region.png")
 
     plt.figure()
 
@@ -38,4 +38,4 @@ if __name__ == "__main__":
     plt.ylabel("Average Cost")
     plt.tight_layout()
 
-    plt.savefig("../../figure/Adaline_SGD_cost.png")
+    plt.savefig("../../figure/test_Adaline_SGD_cost.png")
