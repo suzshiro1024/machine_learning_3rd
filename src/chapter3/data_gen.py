@@ -2,26 +2,24 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn import datasets
 
-import numpy as np
-
 
 def data_gen():
     """
     return values: X_train_std, X_test_std, y_train, y_test
     """
-    sc = StandardScaler()
+    scaler = StandardScaler()
 
     iris = datasets.load_iris()
 
-    X = iris.data[:, [2, 3]]
-    y = iris.target
+    x_data = iris.data[:, [2, 3]]
+    y_data = iris.target
 
-    X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.3, random_state=1, stratify=y
+    x_train, x_test, y_train, y_test = train_test_split(
+        x_data, y_data, test_size=0.3, random_state=1, stratify=y_data
     )
 
-    sc.fit(X_train)
-    X_train_std = sc.transform(X_train)
-    X_test_std = sc.transform(X_test)
+    scaler.fit(x_train)
+    x_train_std = scaler.transform(x_train)
+    x_test_std = scaler.transform(x_test)
 
-    return X_train_std, X_test_std, y_train, y_test
+    return x_train_std, x_test_std, y_train, y_test
