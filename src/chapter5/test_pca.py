@@ -1,4 +1,4 @@
-from wine_gen import wine_data_gen
+from gen_wine import wine_data_gen
 from sklearn.preprocessing import StandardScaler
 import numpy as np
 import matplotlib.pyplot as plt

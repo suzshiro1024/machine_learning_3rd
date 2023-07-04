@@ -1,4 +1,4 @@
-from wine_gen import wine_data_gen
+from gen_wine import wine_data_gen
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.decomposition import PCA
