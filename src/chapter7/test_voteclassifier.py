@@ -1,3 +1,4 @@
+from majority_vote_classifier import MajorityVoteClassifier
 from sklearn import datasets
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import LabelEncoder
@@ -5,7 +6,6 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.pipeline import Pipeline
-from majority_vote_classifier import MajorityVoteClassifier
 
 from sklearn.metrics import auc
 from sklearn.metrics import roc_curve
