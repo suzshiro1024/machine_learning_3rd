@@ -5,7 +5,8 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-if __name__ == "__main__":
+
+def main():
     df = pd.read_csv("../../data/iris.data", header=None)
 
     y = df.iloc[0:100, 4].values
@@ -24,3 +25,7 @@ if __name__ == "__main__":
     plt.legend(loc="upper left")
 
     plt.savefig("../../figure/region_plot_test.png")
+
+
+if __name__ == "__main__":
+    main()

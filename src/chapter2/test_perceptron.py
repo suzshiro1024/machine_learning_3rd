@@ -4,7 +4,7 @@ import pandas as pd
 from perceptron import Perceptron
 
 
-if __name__ == "__main__":
+def main():
     df = pd.read_csv("../../data/iris.data", header=None)
 
     y = df.iloc[0:100, 4].values
@@ -20,3 +20,7 @@ if __name__ == "__main__":
     plt.ylabel("Number of Update")
 
     plt.savefig("../../figure/iris_fitting.png")
+
+
+if __name__ == "__main__":
+    main()

@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 
-if __name__ == "__main__":
+def main():
     path = os.path.join(
         "https://archive.ics.uci.edu",
         "ml",
@@ -15,3 +15,7 @@ if __name__ == "__main__":
 
     df = pd.read_csv(path, header=None, encoding="utf-8")
     df.tail()
+
+
+if __name__ == "__main__":
+    main()

@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-if __name__ == "__main__":
+def main():
     df = pd.read_csv("../../data/iris.data", header=None)
 
     y = df.iloc[0:100, 4].values
@@ -29,3 +29,7 @@ if __name__ == "__main__":
     ax[1].set_title("Adalines - Learning rate 0.01")
 
     plt.savefig("../../figure/adaline.png")
+
+
+if __name__ == "__main__":
+    main()

@@ -2,7 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-if __name__ == "__main__":
+
+def main():
     df = pd.read_csv("../../data/iris.data", header=None)
 
     # 1-100行目の目的変数の抽出
@@ -27,3 +28,7 @@ if __name__ == "__main__":
     plt.legend(loc="upper left")
 
     plt.savefig("../../figure/iris.png")
+
+
+if __name__ == "__main__":
+    main()

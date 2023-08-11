@@ -5,7 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-if __name__ == "__main__":
+def main():
     df = pd.read_csv("../../data/iris.data", header=None)
 
     # 1-100行目の目的変数の抽出
@@ -47,3 +47,7 @@ if __name__ == "__main__":
 
     plt.tight_layout()
     plt.savefig("../../figure/Adaline_std_cost.png")
+
+
+if __name__ == "__main__":
+    main()
