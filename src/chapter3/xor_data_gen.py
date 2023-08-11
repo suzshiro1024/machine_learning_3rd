@@ -12,7 +12,7 @@ def xor_data_gen():
     return X_xor, y_xor
 
 
-if __name__ == "__main__":
+def main():
     X_xor, y_xor = xor_data_gen()
 
     plt.scatter(
@@ -26,3 +26,7 @@ if __name__ == "__main__":
     plt.legend(loc="best")
     plt.tight_layout()
     plt.savefig("../../figure/xor_data.png")
+
+
+if __name__ == "__main__":
+    main()

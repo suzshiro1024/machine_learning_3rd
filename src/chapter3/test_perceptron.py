@@ -5,7 +5,8 @@ from sklearn.metrics import accuracy_score
 from sklearn import datasets
 import numpy as np
 
-if __name__ == "__main__":
+
+def main():
     sc = StandardScaler()
 
     iris = datasets.load_iris()
@@ -29,3 +30,7 @@ if __name__ == "__main__":
     print(f"Missclassified examples: {(y_test != y_pred).sum()}")
     print(f"Accuracy: {accuracy_score(y_test, y_pred)}")
     print(f"Accuracy: {ppn.score(X_test_std, y_test)}")
+
+
+if __name__ == "__main__":
+    main()

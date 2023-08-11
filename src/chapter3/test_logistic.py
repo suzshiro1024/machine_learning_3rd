@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-if __name__ == "__main__":
+def main():
     z = np.arange(-10, 10, 0.1)
     phi_z = sigmoid(z)
 
@@ -23,3 +23,7 @@ if __name__ == "__main__":
     plt.tight_layout()
 
     plt.savefig("../../figure/test_logistic.png")
+
+
+if __name__ == "__main__":
+    main()

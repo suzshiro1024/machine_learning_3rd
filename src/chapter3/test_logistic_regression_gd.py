@@ -11,7 +11,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-if __name__ == "__main__":
+def main():
     X_train_std, X_test_std, y_train, y_test = data_gen()
 
     X_train_01_subset = X_train_std[(y_train == 0) | (y_train == 1)]
@@ -27,3 +27,7 @@ if __name__ == "__main__":
     plt.tight_layout()
 
     plt.savefig("../../figure/test_lrgd.png")
+
+
+if __name__ == "__main__":
+    main()

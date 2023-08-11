@@ -2,7 +2,8 @@ from data_gen import data_gen
 from sklearn.linear_model import LogisticRegression
 import numpy as np
 
-if __name__ == "__main__":
+
+def main():
     X_train_std, X_test_std, y_train, y_test = data_gen()
 
     lr = LogisticRegression(C=100.0, random_state=1, solver="lbfgs", multi_class="ovr")
@@ -21,3 +22,6 @@ if __name__ == "__main__":
 
     # good (配列の次元がpredictで扱える二次元に自動で変更される)
     print(f"predict:\n {lr.predict(X_test_std[0,:].reshape(1,-1))}")
+
+
+if __name__ == "__main__":

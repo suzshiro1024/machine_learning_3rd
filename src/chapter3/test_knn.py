@@ -5,7 +5,8 @@ from sklearn.neighbors import KNeighborsClassifier
 import numpy as np
 import matplotlib.pyplot as plt
 
-if __name__ == "__main__":
+
+def main():
     X_train_std, X_test_std, y_train, y_test = data_gen()
 
     knn = KNeighborsClassifier(n_neighbors=5, p=2, metric="minkowski")
@@ -24,3 +25,7 @@ if __name__ == "__main__":
     plt.tight_layout()
 
     plt.savefig("../../figure/test_knn.png")
+
+
+if __name__ == "__main__":
+    main()

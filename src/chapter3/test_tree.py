@@ -7,7 +7,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-if __name__ == "__main__":
+def main():
     iris = datasets.load_iris()
 
     X = iris.data[:, [2, 3]]
@@ -33,3 +33,7 @@ if __name__ == "__main__":
     plt.tight_layout()
 
     plt.savefig("../../figure/test_tree.png")
+
+
+if __name__ == "__main__":
+    main()

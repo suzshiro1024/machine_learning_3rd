@@ -9,7 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-if __name__ == "__main__":
+def main():
     iris = datasets.load_iris()
 
     X = iris.data[:, [2, 3]]
@@ -33,3 +33,7 @@ if __name__ == "__main__":
 
     graph = graph_from_dot_data(dot_data)
     graph.write_png("../../figure/test_tree_graphviz.png")
+
+
+if __name__ == "__main__":
+    main()

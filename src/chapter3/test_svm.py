@@ -5,7 +5,8 @@ from sklearn.svm import SVC
 import numpy as np
 import matplotlib.pyplot as plt
 
-if __name__ == "__main__":
+
+def main():
     X_train_std, X_test_std, y_train, y_test = data_gen()
 
     svm = SVC(kernel="linear", C=1.0, random_state=1)
@@ -23,3 +24,7 @@ if __name__ == "__main__":
     plt.legend(loc="upper left")
     plt.tight_layout()
     plt.savefig("../../figure/test_svm.png")
+
+
+if __name__ == "__main__":
+    main()

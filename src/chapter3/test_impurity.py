@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-if __name__ == "__main__":
+def main():
     x = np.arange(0.0, 1.0, 0.01)
 
     ent = [entropy(p) if p != 0 else None for p in x]
@@ -15,7 +15,12 @@ if __name__ == "__main__":
 
     fig = plt.figure()
     ax = plt.subplot(111)
-    for i, lab, ls, c, in zip(
+    for (
+        i,
+        lab,
+        ls,
+        c,
+    ) in zip(
         [ent, sc_ent, gini(x), err],
         ["Entropy", "Entropy(scaled)", "Gini impurity", "Misclassification"],
         ["-", "-", "--", "-."],
@@ -38,3 +43,7 @@ if __name__ == "__main__":
     plt.xlabel("p(i=1)")
     plt.ylabel("impurity index")
     plt.savefig("../../figure/test_impurity.png")
+
+
+if __name__ == "__main__":
+    main()

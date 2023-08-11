@@ -2,7 +2,8 @@ from sklearn.model_selection import train_test_split
 from sklearn import datasets
 import numpy as np
 
-if __name__ == "__main__":
+
+def main():
     iris = datasets.load_iris()
 
     X = iris.data[:, [2, 3]]
@@ -15,3 +16,7 @@ if __name__ == "__main__":
     print(f"Label counts in y: {np.bincount(y)}")
     print(f"Label counts in y_train: {np.bincount(y_train)}")
     print(f"Label counts in y_test: {np.bincount(y_test)}")
+
+
+if __name__ == "__main__":
+    main()

@@ -4,7 +4,8 @@ from region_plot import plot_decision_regions
 import numpy as np
 import matplotlib.pyplot as plt
 
-if __name__ == "__main__":
+
+def main():
     X_train_std, X_test_std, y_train, y_test = data_gen()
 
     ppn = Perceptron(eta0=0.01, random_state=1)
@@ -24,3 +25,7 @@ if __name__ == "__main__":
     plt.legend(loc="upper left")
     plt.tight_layout()
     plt.savefig("../../figure/region_plot_test_sklearn.png")
+
+
+if __name__ == "__main__":
+    main()

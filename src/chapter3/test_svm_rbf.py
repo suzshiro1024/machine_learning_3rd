@@ -8,7 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-if __name__ == "__main__":
+def main():
     X_xor, y_xor = xor_data_gen()
 
     svm = SVC(kernel="rbf", random_state=1, gamma=0.10, C=10.0)
@@ -53,3 +53,7 @@ if __name__ == "__main__":
     plt.legend(loc="upper left")
     plt.tight_layout()
     plt.savefig("../../figure/test_svm_rbf_iris2.png")
+
+
+if __name__ == "__main__":
+    main()

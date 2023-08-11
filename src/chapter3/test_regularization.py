@@ -5,18 +5,18 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-if __name__ == "__main__":
+def main():
     X_train_std, X_test_std, y_train, y_test = data_gen()
 
     weights, params = [], []
 
     for c in np.arange(-5, 5):
         lr = LogisticRegression(
-            C=10.0 ** c, random_state=1, solver="lbfgs", multi_class="ovr"
+            C=10.0**c, random_state=1, solver="lbfgs", multi_class="ovr"
         )
         lr.fit(X_train_std, y_train)
         weights.append(lr.coef_[1])
-        params.append(10.0 ** c)
+        params.append(10.0**c)
 
     weights = np.array(weights)
 
@@ -29,3 +29,7 @@ if __name__ == "__main__":
     plt.xscale("log")
 
     plt.savefig("../../figure/test_refularization.png")
+
+
+if __name__ == "__main__":
+    main()

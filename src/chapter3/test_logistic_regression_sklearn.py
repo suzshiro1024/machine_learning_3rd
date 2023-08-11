@@ -4,7 +4,8 @@ from sklearn.linear_model import LogisticRegression
 import numpy as np
 import matplotlib.pyplot as plt
 
-if __name__ == "__main__":
+
+def main():
     X_train_std, X_test_std, y_train, y_test = data_gen()
 
     lr = LogisticRegression(C=100.0, random_state=1, solver="lbfgs", multi_class="ovr")
@@ -23,3 +24,7 @@ if __name__ == "__main__":
     plt.tight_layout()
 
     plt.savefig("../../figure/test_lr_sklearn.png")
+
+
+if __name__ == "__main__":
+    main()

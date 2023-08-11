@@ -3,7 +3,8 @@ from sklearn.preprocessing import StandardScaler
 from sklearn import datasets
 import numpy as np
 
-if __name__ == "__main__":
+
+def main():
     sc = StandardScaler()
 
     iris = datasets.load_iris()
@@ -18,3 +19,7 @@ if __name__ == "__main__":
     sc.fit(X_train)
     X_train_std = sc.transform(X_train)
     X_test_std = sc.transform(X_test)
+
+
+if __name__ == "__main__":
+    main()

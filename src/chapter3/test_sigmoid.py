@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-if __name__ == "__main__":
+def main():
     z = np.arange(-7, 7, 0.1)
     phi_z = sigmoid(z)
 
@@ -21,3 +21,7 @@ if __name__ == "__main__":
     plt.tight_layout()
 
     plt.savefig("../../figure/sigmoid_sample.png")
+
+
+if __name__ == "__main__":
+    main()
