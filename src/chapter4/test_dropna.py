@@ -1,6 +1,7 @@
 from nan_gen import nan_gen
 
-if __name__ == "__main__":
+
+def main():
     df = nan_gen()
     print(f"dropna()\n{df.dropna()}")
 
@@ -16,3 +17,7 @@ if __name__ == "__main__":
 
     df_subset = df.dropna(subset=["C"])
     print(f"dropna(subset=[C])\n{df_subset}")
+
+
+if __name__ == "__main__":
+    main()

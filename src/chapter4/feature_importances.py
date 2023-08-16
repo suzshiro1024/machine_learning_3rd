@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 
 
-if __name__ == "__main__":
+def main():
     df_wine = pd.read_csv("../../data/wine.data", header=None)
 
     df_wine.columns = [
@@ -48,3 +48,7 @@ if __name__ == "__main__":
     plt.xlim([-1, X_train.shape[1]])
     plt.tight_layout()
     plt.savefig("../../figure/feature_importance.png")
+
+
+if __name__ == "__main__":
+    main()

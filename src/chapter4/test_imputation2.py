@@ -3,7 +3,7 @@ from sklearn.impute import SimpleImputer
 import numpy as np
 
 
-if __name__ == "__main__":
+def main():
     df = nan_gen()
 
     imr = SimpleImputer(missing_values=np.nan, strategy="mean")
@@ -11,3 +11,7 @@ if __name__ == "__main__":
 
     imputed_data = df.fillna(df.mean())
     print(f"imputed_data\n{imputed_data}")
+
+
+if __name__ == "__main__":
+    main()

@@ -15,5 +15,9 @@ def category_gen():
     return df
 
 
-if __name__ == "__main__":
+def main():
     print(f"df\n{category_gen()}")
+
+
+if __name__ == "__main__":
+    main()

@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-if __name__ == "__main__":
+def main():
     df_wine = pd.read_csv("../../data/wine.data", header=None)
 
     df_wine.columns = [
@@ -64,3 +64,7 @@ if __name__ == "__main__":
     knn.fit(X_train_std[:, k3], y_train)
     print(f"Training Accuracy:{knn.score(X_train_std[:,k3], y_train)}")
     print(f"Test Accuracy:{knn.score(X_test_std[:,k3],y_test)}")
+
+
+if __name__ == "__main__":
+    main()

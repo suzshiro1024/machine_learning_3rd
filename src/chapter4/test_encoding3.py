@@ -2,7 +2,7 @@ from sklearn.preprocessing import LabelEncoder
 from category_gen import category_gen
 
 
-if __name__ == "__main__":
+def main():
     df = category_gen()
 
     X = df[["color", "size", "price"]].values
@@ -11,3 +11,7 @@ if __name__ == "__main__":
     X[:, 0] = color_le.fit_transform(X[:, 0])
 
     print(f"X\n{X}")
+
+
+if __name__ == "__main__":
+    main()

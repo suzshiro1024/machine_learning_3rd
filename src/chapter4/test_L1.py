@@ -3,7 +3,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 
 
-if __name__ == "__main__":
+def main():
     X_train, X_test, y_train, y_test = wine_data_gen()
 
     stdsc = StandardScaler()
@@ -15,3 +15,7 @@ if __name__ == "__main__":
 
     print(f"Training Accuracy: {lr.score(X_train_std, y_train)}")
     print(f"Test Accuracy: {lr.score(X_test_std, y_test)}")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,7 +1,8 @@
 import pandas as pd
 import numpy as np
 
-if __name__ == "__main__":
+
+def main():
     df_wine = pd.read_csv("../../data/wine.data", header=None)
 
     df_wine.columns = [
@@ -24,3 +25,7 @@ if __name__ == "__main__":
     c_label = np.unique(df_wine["Class label"])
     print(f"Class labels\n{c_label}")
     print(f"df\n{df_wine.head()}")
+
+
+if __name__ == "__main__":
+    main()

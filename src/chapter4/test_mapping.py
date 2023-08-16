@@ -1,6 +1,7 @@
 from category_gen import category_gen
 
-if __name__ == "__main__":
+
+def main():
     df = category_gen()
 
     size_mapping = {"XL": 3, "L": 2, "M": 1}
@@ -11,3 +12,7 @@ if __name__ == "__main__":
 
     df["size"] = df["size"].map(inv_size_mapping)
     print(f"df\n{df}")
+
+
+if __name__ == "__main__":
+    main()

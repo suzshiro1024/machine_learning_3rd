@@ -1,6 +1,7 @@
 from category_gen import category_gen
 
-if __name__ == "__main__":
+
+def main():
     df = category_gen()
 
     df["x > M"] = df["size"].apply(lambda x: 1 if x in {"L", "XL"} else 0)
@@ -9,3 +10,7 @@ if __name__ == "__main__":
     del df["size"]
 
     print(f"df\n{df}")
+
+
+if __name__ == "__main__":
+    main()

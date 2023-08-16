@@ -13,5 +13,9 @@ def nan_gen():
     return df
 
 
-if __name__ == "__main__":
+def main():
     print(nan_gen())
+
+
+if __name__ == "__main__":
+    main()

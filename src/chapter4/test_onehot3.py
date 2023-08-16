@@ -2,7 +2,8 @@ from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
 from category_gen import category_gen
 
-if __name__ == "__main__":
+
+def main():
     df = category_gen()
 
     size_mapping = {"XL": 3, "L": 2, "M": 1}
@@ -18,3 +19,7 @@ if __name__ == "__main__":
     X_ohe = c_transf.fit_transform(X).astype(float)
 
     print(f"X\n{X_ohe}")
+
+
+if __name__ == "__main__":
+    main()

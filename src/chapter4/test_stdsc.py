@@ -2,7 +2,7 @@ from wine_gen import wine_data_gen
 from sklearn.preprocessing import StandardScaler
 
 
-if __name__ == "__main__":
+def main():
     X_train, X_test, y_train, y_test = wine_data_gen()
 
     stdsc = StandardScaler()
@@ -11,3 +11,7 @@ if __name__ == "__main__":
 
     print(f"X_train\n{X_train_std[:10]}")
     print(f"X_test\n{X_test_std[:10]}")
+
+
+if __name__ == "__main__":
+    main()

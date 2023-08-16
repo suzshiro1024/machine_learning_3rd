@@ -2,7 +2,8 @@ from sklearn.preprocessing import LabelEncoder
 from category_gen import category_gen
 import numpy as np
 
-if __name__ == "__main__":
+
+def main():
     df = category_gen()
 
     class_le = LabelEncoder()
@@ -12,3 +13,7 @@ if __name__ == "__main__":
 
     inv = class_le.inverse_transform(y)
     print(f"inv\n{inv}")
+
+
+if __name__ == "__main__":
+    main()

@@ -5,7 +5,8 @@ from sklearn.feature_selection import SelectFromModel
 import numpy as np
 import pandas as pd
 
-if __name__ == "__main__":
+
+def main():
     df_wine = pd.read_csv("../../data/wine.data", header=None)
 
     df_wine.columns = [
@@ -46,3 +47,7 @@ if __name__ == "__main__":
             "%2d) %-*s %f"
             % (f + 1, 30, feat_labels[indices[f]], importances[indices[f]])
         )
+
+
+if __name__ == "__main__":
+    main()

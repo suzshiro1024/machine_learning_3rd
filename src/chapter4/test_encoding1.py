@@ -1,7 +1,8 @@
 from category_gen import category_gen
 import numpy as np
 
-if __name__ == "__main__":
+
+def main():
     df = category_gen()
 
     class_mapping = {
@@ -16,3 +17,7 @@ if __name__ == "__main__":
 
     df["classlabel"] = df["classlabel"].map(inv_class_mapping)
     print(f"df\n{df}")
+
+
+if __name__ == "__main__":
+    main()

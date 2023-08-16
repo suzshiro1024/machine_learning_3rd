@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 
 
-if __name__ == "__main__":
+def main():
     df_wine = pd.read_csv("../../data/wine.data", header=None)
 
     X_train, X_test, y_train, y_test = wine_data_gen()
@@ -39,7 +39,7 @@ if __name__ == "__main__":
     for c in np.arange(-4.0, 6.0):
         lr = LogisticRegression(
             penalty="l1",
-            C=10.0 ** c,
+            C=10.0**c,
             solver="liblinear",
             multi_class="ovr",
             random_state=0,
@@ -47,7 +47,7 @@ if __name__ == "__main__":
 
         lr.fit(X_train_std, y_train)
         weights.append(lr.coef_[1])
-        params.append(10 ** c)
+        params.append(10**c)
 
     weights = np.array(weights)
 
@@ -57,7 +57,7 @@ if __name__ == "__main__":
         )
 
     plt.axhline(0, color="black", linestyle="--", linewidth=3)
-    plt.xlim([10 ** (-5), 10 ** 5])
+    plt.xlim([10 ** (-5), 10**5])
 
     plt.ylabel("weight coefficient")
     plt.xlabel("C")
@@ -67,3 +67,7 @@ if __name__ == "__main__":
     ax.legend(loc="upper center", bbox_to_anchor=(1.38, 1.03), ncol=1, fancybox=True)
 
     plt.savefig("../../figure/L1_path.png")
+
+
+if __name__ == "__main__":
+    main()
